@@ -9,7 +9,10 @@ namespace Project
     internal class Tour
     {
         public string toursname;
-        public int date;
+    
+        public int day;
+        public int month;
+        public int year;
         public string name;
         
 

@@ -16,6 +16,9 @@ namespace Project
         List<string> freetours = new List<string>() { "Moscow", "London" };
         List<Tour> gettours = new List<Tour>();
         //public string NameDate;
+        int todayday = 10;
+        int todaymonth = 06;
+        int todayyear = 2025;
 
         public FormTour()
         {
@@ -42,7 +45,10 @@ namespace Project
             Tour tour = new Tour();
             tour.toursname = freetours[currentIndex];
             tour.name = formadd.name;
-            tour.date = formadd.date;
+            //tour.date = formadd.date;
+            tour.day = formadd.day;
+            tour.month = formadd.month;
+            tour.year = formadd.year;
             gettours.Add(tour);
             freetours.RemoveAt(currentIndex);
             listBoxFreeTours.Items.Clear();
@@ -53,7 +59,7 @@ namespace Project
             }
             foreach (var t in gettours)
             {
-                listBoxGetTours.Items.Add(t.toursname + " " + t.name + " " + t.date);
+                listBoxGetTours.Items.Add(t.toursname + " " + t.name + " " + t.day + " " + t.month + " " + t.year);
 
             }
         }
@@ -62,8 +68,8 @@ namespace Project
             listBoxGetTours.Items.Clear();
             foreach (var t in gettours)
             {
-                if (t.date >= 2025) listBoxGetTours.Items.Add(t.toursname + " " + t.name + " " + t.date);
-                if (t.date == 2025) MessageBox.Show("Скоро поездка: "+t.toursname);
+                if (t.year >= todayyear && t.month >= todaymonth && t.day >= todayday) listBoxGetTours.Items.Add(t.toursname + " " + t.name + " " + t.day + " " + t.month + " " + t.year);
+                if (t.year == todayyear && t.month == todaymonth && (t.day == todayday || (t.day - todayday == 2))) MessageBox.Show("Скоро поездка: "+t.toursname);
             }
 
         }

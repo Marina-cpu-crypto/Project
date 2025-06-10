@@ -14,7 +14,10 @@ namespace Project
     public partial class FormAddInformation : Form
     {
         public string name;
-        public int date;
+      
+        public int day;
+        public int month;
+        public int year;
         public FormAddInformation()
         {
             InitializeComponent();
@@ -23,8 +26,11 @@ namespace Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             name = textBoxName.Text;
-            date = Convert.ToInt32(textBoxdate.Text);
-            
+            day = Convert.ToInt32(textBoxday.Text);
+            month = Convert.ToInt32(textBoxMonth.Text);
+            year = Convert.ToInt32(textBoxYear.Text);
+            this.Close();
+
         }
     }
 }
