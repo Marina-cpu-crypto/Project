@@ -26,9 +26,9 @@ namespace Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             name = textBoxName.Text;
-            day = Convert.ToInt32(textBoxday.Text);
-            month = Convert.ToInt32(textBoxMonth.Text);
-            year = Convert.ToInt32(textBoxYear.Text);
+            day = dateTimePicker.Value.Day;
+            month = dateTimePicker.Value.Month;
+            year = dateTimePicker.Value.Year;
             this.Close();
 
         }

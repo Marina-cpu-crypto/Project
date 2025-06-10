@@ -32,9 +32,7 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxday = new System.Windows.Forms.TextBox();
-            this.textBoxMonth = new System.Windows.Forms.TextBox();
-            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -68,39 +66,23 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(222, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 13);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "добавьте дату: число, месяц, год";
+            this.label2.Text = "добавьте дату";
             // 
-            // textBoxday
+            // dateTimePicker
             // 
-            this.textBoxday.Location = new System.Drawing.Point(253, 65);
-            this.textBoxday.Name = "textBoxday";
-            this.textBoxday.Size = new System.Drawing.Size(100, 20);
-            this.textBoxday.TabIndex = 4;
-            // 
-            // textBoxMonth
-            // 
-            this.textBoxMonth.Location = new System.Drawing.Point(253, 113);
-            this.textBoxMonth.Name = "textBoxMonth";
-            this.textBoxMonth.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMonth.TabIndex = 5;
-            // 
-            // textBoxYear
-            // 
-            this.textBoxYear.Location = new System.Drawing.Point(253, 169);
-            this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(100, 20);
-            this.textBoxYear.TabIndex = 6;
+            this.dateTimePicker.Location = new System.Drawing.Point(197, 82);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.TabIndex = 7;
             // 
             // FormAddInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 251);
-            this.Controls.Add(this.textBoxYear);
-            this.Controls.Add(this.textBoxMonth);
-            this.Controls.Add(this.textBoxday);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
@@ -118,8 +100,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxday;
-        private System.Windows.Forms.TextBox textBoxMonth;
-        private System.Windows.Forms.TextBox textBoxYear;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }
